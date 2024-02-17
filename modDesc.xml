@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="60">
+    
+	<author>DennisK</author>
+   
+   <version>1.0.0.0</version>
+    
+	<title>
+        <en>Nardi headertrailer pack DK edit</en>
+    </title>
+    
+	<description>
+        <en>My Mod Description</en>
+    </description>
+    
+	<iconFilename>icons/modIcon.png</iconFilename>
+    
+	<storeItems>
+        <storeItem xmlFilename="xml/n20T.xml"/>
+        <storeItem xmlFilename="xml/n40b.xml"/>
+        <storeItem xmlFilename="xml/n40bx.xml"/>
+        <storeItem xmlFilename="xml/n60_30.xml"/>
+        <storeItem xmlFilename="xml/n60_40.xml"/>
+        <storeItem xmlFilename="xml/n70_30.xml"/>
+    
+	</storeItems>
+	
+	<multiplayer supported="true"/>
+	
+	<extraSourceFiles>
+        <sourceFile filename="scripts/categorizer.lua"/>
+    </extraSourceFiles>
+	
+	<newcategory name="DennisKtools" title="DennisK" type="TOOL" img="Categories/CategoryTools.png" />
+	
+</modDesc>

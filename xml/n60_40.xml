@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    
+	<storeData>
+        <name>
+            <en>N60-40</en></name>
+        <specs>
+            <combination xmlFilename="$data/vehicles/fendt/powerFlow/powerFlow.xml"/>
+            <combination xmlFilename="$data/vehicles/masseyFerguson/powerFlow/powerFlow.xml"/>
+            <combination xmlFilename="$data/vehicles/fendt/dynaFlex9255/dynaFlex9255.xml"/>
+            <combination xmlFilename="$data/vehicles/masseyFerguson/dynaFlex9255/dynaFlex9255.xml"/>
+            <!-- <combination xmlFilename="$data/vehicles/newHolland/varifeed41/varifeed41.xml" /> -->
+            <combination xmlFilename="$data/vehicles/case/terraFlex3050_41/terraFlex3050_41.xml"/>
+            <combination xmlFilename="$data/vehicles/capello/helianthus12000/helianthus12000.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterTrailer</function>
+        </functions>
+        <image>icons/store_n60_40.dds</image>
+        <price>10500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>NARDI</brand>
+        <category>DennisKtools</category>
+        <shopTranslationOffset>0 0.042 0</shopTranslationOffset>
+        <shopRotationOffset>0.055 0 0</shopRotationOffset>
+        <shopLoadingDelay initial="0.3"/>
+        <vertexBufferMemoryUsage>840192</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>152320</indexBufferMemoryUsage>
+        <textureMemoryUsage>1966080</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    
+	<base>
+        <typeDesc>$l10n_typeDesc_cutterTrailer</typeDesc>
+        <filename>i3d/n60_40.i3d</filename>
+        <size width="3.8" length="17.8" lengthOffset="0.05"/>
+        <components>
+            <component centerOfMass="0 0.45 -1.5" solverIterationCount="30" mass="1000"/>
+            <component centerOfMass="0 -0.141 -0.198" solverIterationCount="30" mass="1000"/>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="400"/>
+            <joint component1="1" component2="2" node="componentJointAxis" rotLimit="0 115 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL_TRAILED"/>
+    </base>
+    
+	<wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="Default Special" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT_SPECIAL">
+                <wheels>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.8" repr="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.12" spring="62" damper="15"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.8" repr="wheelFrontRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.12" spring="62" damper="15"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="wheelBackLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="60" damper="15"/>
+                        <wheelChock parkingNode="wheelChock02_left" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d"/>
+                        <wheelChock parkingNode="wheelChock02_right" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="wheelBackRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="60" damper="15"/>
+                    </wheel>
+                </wheels>
+				<objectChange node="wheelSpareSpecial"	visibilityActive="true"		visibilityInactive="false"/>
+				<objectChange node="wheelSpare"			visibilityActive="false"	visibilityInactive="true"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.8" repr="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.12" spring="62" damper="15"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.8" repr="wheelFrontRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.12" spring="62" damper="15"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="wheelBackLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="60" damper="15"/>
+                        <wheelChock parkingNode="wheelChock02_left" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d"/>
+                        <wheelChock parkingNode="wheelChock02_right" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.4" repr="wheelBackRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="60" damper="15"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <dynamicallyLoadedWheels>
+            <dynamicallyLoadedWheel linkNode="wheelSpare" 			filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml"/>
+            <dynamicallyLoadedWheel linkNode="wheelSpareSpecial" 	filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml"/>
+        </dynamicallyLoadedWheels>
+        <hubs>
+            <color0 useBaseColor="true"/>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="wheelFrontLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.12 0.20 0.20"/>
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.12 0.20 0.20"/>
+            <hub linkNode="wheelBackLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.12 0.20 0.20"/>
+            <hub linkNode="wheelBackRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.12 0.20 0.20"/>
+            <hub linkNode="wheelSpare" filename="$data/shared/wheels/hubs/hubImperador_n0_1.xml" isLeft="false" scale="0.02 0.07 0.07">
+                <color1>-</color1>
+            </hub>
+        </hubs>
+    </wheels>
+    
+	<attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" rootNode="n60_40_drawbar_component3" attacherHeight="0.68"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="0.25"/>
+    </attachable>
+    
+	<licensePlates>
+        <licensePlate node="licensePlate" position="BACK" preferedType="SQUARISH" placementArea="0.08 0.2 0.2 0.2"/>
+    </licensePlates>
+    
+	<connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.6" diameter="0.008" straighteningFactor="0.2">
+            <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+    
+	<dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="wheelChockSupport01_left" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="wheelChockSupport01_right" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="1|1" linkNode="electric_connector" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+    
+	<lights>
+        <sharedLight linkNode="redTriangle_02_left" 		filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml"/>
+        <sharedLight linkNode="redTriangle_02_right" 		filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml"/>
+        <sharedLight linkNode="redRound_03_left" 			filename="$data/shared/assets/reflectors/lizard/redRound_03.xml"/>
+        <sharedLight linkNode="redRound_03_right" 			filename="$data/shared/assets/reflectors/lizard/redRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_01"	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_02" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_03" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_04" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_05" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_06" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_06" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_07" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_06" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_10" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_11" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_12" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_13" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_14" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_15" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="reflectorYellowRound_03_16" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+		
+        <sharedLight linkNode="sideLightRed_01" 			filename="lights/sideMarker07Red.xml"/>
+        <sharedLight linkNode="sideLightRed_02" 			filename="lights/sideMarker07Red.xml"/>
+		
+        <sharedLight linkNode="sideLightOrange_01" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_02" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_03" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_04" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_05" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_06" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_07" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_08" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_09" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_10" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_11" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_12" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_13" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_14" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_15" 			filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLightOrange_16" 			filename="lights/sideMarker07Orange.xml"/>
+		
+        <sharedLight linkNode="reverseLight" 				filename="lights/workingLight15_Reverse.xml"/>
+		
+        <realLights>
+            <high>
+                <light 			node="backLightsHigh1" 			lightTypes="0"/>
+                <light 			node="licensePlateLightHigh"	lightTypes="0"/>
+                <light 			node="sidemarkerRed_real"		lightTypes="0"/>
+                <light 			node="sidemarkerOrange_real"	lightTypes="0"/>
+                <turnLightLeft 	node="turnLightLeftBack"/>
+                <turnLightRight	node="turnLightRightBack"/>
+                <brakeLight 	node="backLightsHigh1"/>
+                <reverseLight 	node="reverseLight_white_real"/>
+            </high>
+        </realLights>
+		
+        <defaultLights>
+            <defaultLight 	shaderNode="defaultLightStatic" 			lightTypes="0" intensity="50"/>
+            <defaultLight 	shaderNode="defaultLightGlassStatic" 		lightTypes="0" intensity="5"/>
+            <defaultLight 	shaderNode="licensePlateLightGlassStatic" 	lightTypes="0" intensity="5"/>
+        </defaultLights>
+		
+        <turnLights>
+            <turnLightLeft 	shaderNode="turnlightLeftStatic" 			intensity="50"/>
+            <turnLightLeft 	shaderNode="turnlightLeftGlassStatic" 		intensity="5"/>
+            <turnLightRight shaderNode="turnlightRightStatic" 			intensity="50"/>
+            <turnLightRight	shaderNode="turnlightRightGlassStatic" 		intensity="5"/>
+        </turnLights>
+		
+        <brakeLights>
+            <brakeLight 	shaderNode="defaultLightStatic" 			intensity="50"/>
+            <brakeLight 	shaderNode="defaultLightGlassStatic" 		intensity="5"/>
+        </brakeLights>
+		
+        <beaconLights>
+            <beaconLight node="beaconLight03" filename="$data/shared/assets/beaconLights/lizard/beaconLight03.xml"/>
+        </beaconLights>
+		
+    </lights>
+    
+	<dynamicMountAttacher triggerNode="dynamicMountTrigger" rootNode="n60_40_main_component1" jointNode="n60_40_main_component1" forceAcceleration="500" mountType="TYPE_AUTO_ATTACH_XZ" transferMass="true">
+        <lockPosition jointNode="capelloHelianthus12000" xmlFilename="$data/vehicles/capello/helianthus12000/helianthus12000.xml"/>
+        <lockPosition jointNode="newHollandVarifeed41" xmlFilename="$data/vehicles/newHolland/varifeed41/varifeed41.xml"/>
+        <lockPosition jointNode="fendtDynaFlex9255" xmlFilename="$data/vehicles/fendt/dynaFlex9255/dynaFlex9255.xml"/>
+        <lockPosition jointNode="fendtPowerFlow" xmlFilename="$data/vehicles/fendt/powerFlow/powerFlow.xml"/>
+    </dynamicMountAttacher>
+    
+	<animations>
+        <animation name="moveSupport">
+            <part componentJointIndex="2" startTime="0.0" endTime="0.15" startRotLimit="25 0 0" endRotLimit="5 0 0"/>
+        </animation>
+    </animations>
+    
+	<cylindered>
+        <movingParts>
+            <movingPart node="drawbarPart" referencePoint="drawbarSpringRef" referenceFrame="drawbarSpringRef" isActiveDirty="true" maxUpdateDistance="100"/>
+            <movingPart node="drawbarSpring" referencePoint="drawbarSpringRef" referenceFrame="drawbarSpringRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="100"/>
+        </movingParts>
+    </cylindered>
+    
+	<ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.8" height="2.2" length="15.3" lengthOffset="-6.75" hasCollision="false"/>
+        <agentAttachment jointNode="componentJointAxis" rotCenterWheelIndices="3 4" width="1.0" height="1.2" length="1" lengthOffset="10.6"/>
+    </ai>
+    
+	<foliageBending>
+        <bendingNode minX="-0.8" maxX="0.7" minZ="-8.6" maxZ="5.4" yOffset="0.4"/>
+        <bendingNode minX="-1.25" maxX="1.25" minZ="-5.4" maxZ="-4.3" yOffset="0.4"/>
+        <bendingNode minX="0.1" maxX="2.4" minZ="-0.3" maxZ="0.3" yOffset="-0.1" node="attacherJoint"/>
+        <bendingNode minX="2.4" maxX="3.4" minZ="-0.5" maxZ="0.5" yOffset="-0.22" node="attacherJoint"/>
+    </foliageBending>
+    
+	<baseMaterial>
+        <material name="n60_40_mat" baseNode="n60_40_vis">
+            <shaderParameter name="colorMat0" value="SHARED_GREYDARK"/>
+            <shaderParameter name="colorMat1" value="SHARED_GREYDARK"/>
+        </material>
+        <material name="n60_40_45box_mat" baseNode="n60_40_vis1">
+            <shaderParameter name="colorMat0" value="SHARED_GREYDARK"/>
+        </material>
+    </baseMaterial>
+    
+	<baseMaterialConfigurations price="0" useDefaultColors="true" defaultColorIndex="0" title="$l10n_configuration_chassisColor">
+        <material name="n60_40_mat" shaderParameter="colorMat0"/>
+        <material name="n60_40_45box_mat" shaderParameter="colorMat0"/>
+		
+		<baseMaterialConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<baseMaterialConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<baseMaterialConfiguration name="DennisK Black" 		color="0 0 0"/>
+		<baseMaterialConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <baseMaterialConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <baseMaterialConfiguration name="Rostselmash" color="ROSTSELMASH_RED1"/>
+    </baseMaterialConfigurations>
+    
+	<designMaterialConfigurations price="0" useDefaultColors="true" defaultColorIndex="0" title="$l10n_configuration_extensionColor">
+        <material name="n60_40_mat" shaderParameter="colorMat1"/>
+		
+		<designMaterialConfiguration name="DennisK Black" 		color="0 0 0"/>
+		<designMaterialConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterialConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterialConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <designMaterialConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <designMaterialConfiguration name="Rostselmash" color="ROSTSELMASH_RED1"/>
+    </designMaterialConfigurations>
+    
+	<rimColorConfigurations price="0" useDefaultColors="true" defaultColorIndex="0">
+		<rimColorConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<rimColorConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<rimColorConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<rimColorConfiguration name="DennisK Black" 		color="0 0 0"/>
+        <rimColorConfiguration name="$l10n_ui_colorSilver" color="SHARED_WHITE1" material="18" price="0"/>
+        <rimColorConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <rimColorConfiguration name="CLAAS" color="CLAAS_RED1"/>
+    </rimColorConfigurations>
+	    
+	<designConfigurations title="$l10n_configuration_spareWheel">
+        <designConfiguration name="$l10n_configuration_valueYes" price="500">
+            <objectChange node="wheelSpareMount" visibilityActive="true"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueNo" price="0">
+            <objectChange node="wheelSpareMount" visibilityActive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+	
+	<design2Configurations title="Lights or reflectors on the side">
+		<design2Configuration name="Lights">
+			<objectChange node="lights"	visibilityActive="true"	visibilityInactive="false" price="500"/>
+		</design2Configuration>
+		<design2Configuration name="Reflectors">
+			<objectChange node="reflectors"		visibilityActive="true"	visibilityInactive="false" price="0"/>
+		</design2Configuration>
+	</design2Configurations>
+    
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    
+	<washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+    
+	<i3dMappings>
+        <i3dMapping id="n60_40_main_component1" 		node="0>"/>
+		
+        <i3dMapping id="n60_40_vis" 					node="0>0"/>
+		
+        <i3dMapping id="wheelChock02_left" 				node="0>0|0|0|0"/>
+        <i3dMapping id="wheelChock02_right" 			node="0>0|0|0|1"/>
+        <i3dMapping id="wheelChockSupport01_left"		node="0>0|0|0|2"/>
+        <i3dMapping id="wheelChockSupport01_right" 		node="0>0|0|0|3"/>
+		
+        <i3dMapping id="wheelBackLeft" 					node="0>0|1|0"/>
+        <i3dMapping id="wheelBackRight" 				node="0>0|1|1"/>
+		
+        <i3dMapping id="redTriangle_02_left" 			node="0>0|2|0|0"/>
+        <i3dMapping id="redTriangle_02_right" 			node="0>0|2|0|1"/>
+		
+        <i3dMapping id="reflectors" 					node="0>0|2|0|2"/>
+        <i3dMapping id="redRound_03_left" 				node="0>0|2|0|2|0"/>
+        <i3dMapping id="redRound_03_right" 				node="0>0|2|0|2|1"/>
+        <i3dMapping id="reflectorYellowRound_03_01" 	node="0>0|2|0|2|2"/>
+        <i3dMapping id="reflectorYellowRound_03_02" 	node="0>0|2|0|2|3"/>
+        <i3dMapping id="reflectorYellowRound_03_03" 	node="0>0|2|0|2|4"/>
+        <i3dMapping id="reflectorYellowRound_03_04" 	node="0>0|2|0|2|5"/>
+        <i3dMapping id="reflectorYellowRound_03_05" 	node="0>0|2|0|2|6"/>
+        <i3dMapping id="reflectorYellowRound_03_06" 	node="0>0|2|0|2|7"/>
+        <i3dMapping id="reflectorYellowRound_03_07" 	node="0>0|2|0|2|8"/>
+        <i3dMapping id="reflectorYellowRound_03_08" 	node="0>0|2|0|2|9"/>
+        <i3dMapping id="reflectorYellowRound_03_09" 	node="0>0|2|0|2|10"/>
+        <i3dMapping id="reflectorYellowRound_03_10" 	node="0>0|2|0|2|11"/>
+        <i3dMapping id="reflectorYellowRound_03_11" 	node="0>0|2|0|2|12"/>
+        <i3dMapping id="reflectorYellowRound_03_12" 	node="0>0|2|0|2|13"/>
+        <i3dMapping id="reflectorYellowRound_03_13" 	node="0>0|2|0|2|14"/>
+        <i3dMapping id="reflectorYellowRound_03_14" 	node="0>0|2|0|2|15"/>
+        <i3dMapping id="reflectorYellowRound_03_15" 	node="0>0|2|0|2|16"/>
+        <i3dMapping id="reflectorYellowRound_03_16" 	node="0>0|2|0|2|17"/>
+        <i3dMapping id="lights" 						node="0>0|2|0|3"/>
+        <i3dMapping id="sideLightRed_01" 				node="0>0|2|0|3|0"/>
+        <i3dMapping id="sideLightRed_02" 				node="0>0|2|0|3|1"/>
+        <i3dMapping id="sideLightOrange_01" 			node="0>0|2|0|3|2"/>
+        <i3dMapping id="sideLightOrange_02" 			node="0>0|2|0|3|3"/>
+        <i3dMapping id="sideLightOrange_03" 			node="0>0|2|0|3|4"/>
+        <i3dMapping id="sideLightOrange_04" 			node="0>0|2|0|3|5"/>
+        <i3dMapping id="sideLightOrange_05" 			node="0>0|2|0|3|6"/>
+        <i3dMapping id="sideLightOrange_06" 			node="0>0|2|0|3|7"/>
+        <i3dMapping id="sideLightOrange_07" 			node="0>0|2|0|3|8"/>
+        <i3dMapping id="sideLightOrange_08" 			node="0>0|2|0|3|9"/>
+        <i3dMapping id="sideLightOrange_09" 			node="0>0|2|0|3|10"/>
+        <i3dMapping id="sideLightOrange_10" 			node="0>0|2|0|3|11"/>
+        <i3dMapping id="sideLightOrange_11" 			node="0>0|2|0|3|12"/>
+        <i3dMapping id="sideLightOrange_12" 			node="0>0|2|0|3|13"/>
+        <i3dMapping id="sideLightOrange_13" 			node="0>0|2|0|3|14"/>
+        <i3dMapping id="sideLightOrange_14" 			node="0>0|2|0|3|15"/>
+        <i3dMapping id="sideLightOrange_15" 			node="0>0|2|0|3|16"/>
+        <i3dMapping id="sideLightOrange_16" 			node="0>0|2|0|3|17"/>
+        <i3dMapping id="sidemarkerRed_real" 			node="0>0|2|0|3|18|0"/>
+        <i3dMapping id="sidemarkerOrange_real" 			node="0>0|2|0|3|18|1"/>
+		
+        <i3dMapping id="defaultLightStatic" 			node="0>0|2|1|0"/>
+        <i3dMapping id="defaultLightGlassStatic" 		node="0>0|2|1|1"/>
+        <i3dMapping id="licensePlateLightStatic" 		node="0>0|2|1|2"/>
+        <i3dMapping id="licensePlateLightGlassStatic" 	node="0>0|2|1|3"/>
+        <i3dMapping id="turnlightLeftStatic" 			node="0>0|2|1|4"/>
+        <i3dMapping id="turnlightLeftGlassStatic" 		node="0>0|2|1|5"/>
+        <i3dMapping id="turnlightRightStatic" 			node="0>0|2|1|6"/>
+        <i3dMapping id="turnlightRightGlassStatic" 		node="0>0|2|1|7"/>
+        <i3dMapping id="licensePlateLightHigh" 			node="0>0|2|2|0"/>
+        <i3dMapping id="backLightsHigh1" 				node="0>0|2|3|0"/>
+        <i3dMapping id="turnLightLeftBack" 				node="0>0|2|4|0"/>
+        <i3dMapping id="turnLightRightBack" 			node="0>0|2|4|1"/>
+        <i3dMapping id="beaconLight03" 					node="0>0|2|5|0"/>
+        <i3dMapping id="reverseLight" 					node="0>0|2|6"/>
+        <i3dMapping id="reverseLight_white_real" 		node="0>0|2|6|1"/>
+		
+        <i3dMapping id="componentJointAxis" 			node="0>0|3"/>
+		
+        <i3dMapping id="licensePlate" 					node="0>0|4"/>
+		
+        <i3dMapping id="dynamicMountTrigger" 			node="0>0|5|0"/>
+        <i3dMapping id="capelloHelianthus12000" 		node="0>0|5|1"/>
+        <i3dMapping id="newHollandVarifeed41" 			node="0>0|5|2"/>
+        <i3dMapping id="fendtDynaFlex9255" 				node="0>0|5|3"/>
+        <i3dMapping id="fendtPowerFlow" 				node="0>0|5|4"/>
+		
+        <i3dMapping id="wheelSpareMount" 				node="0>0|6|0"/>
+        <i3dMapping id="wheelSpare" 					node="0>0|6|0|0"/>
+        <i3dMapping id="wheelSpareSpecial" 				node="0>0|6|0|2"/>
+		
+        <i3dMapping id="n60_40_vis1" 					node="0>0|7|0"/>
+		
+        <i3dMapping id="n60_40_axis_component2" 		node="1>"/>
+        <i3dMapping id="wheelFrontLeft" 				node="1>0|0"/>
+        <i3dMapping id="wheelFrontRight" 				node="1>0|1"/>
+        <i3dMapping id="componentJointDrawbar" 			node="1>0|2"/>
+        <i3dMapping id="drawbarSpringRef" 				node="1>0|3"/>
+		
+        <i3dMapping id="n60_40_drawbar_component3" 		node="2>"/>
+        <i3dMapping id="attacherJoint" 					node="2>0|0"/>
+		
+        <i3dMapping id="electric" 						node="2>0|1|0"/>
+        <i3dMapping id="electric_detached" 				node="2>0|1|0|0"/>
+        <i3dMapping id="electric_connector" 			node="2>0|1|0|0|0"/>
+		
+        <i3dMapping id="drawbarPart" 					node="2>0|2"/>
+        <i3dMapping id="drawbarSpring" 					node="2>0|2|0"/>
+    </i3dMappings>
+</vehicle>

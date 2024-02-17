@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    
+	<storeData>
+        <name>
+            <en>N70-30</en></name>
+        <specs>
+            <combination xmlFilename="$data/vehicles/newHolland/varifeed28/varifeed28.xml"/>
+            <combination xmlFilename="$data/vehicles/caseIH/terraFlex3050_28/terraFlex3050_28.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterTrailer</function>
+        </functions>
+        <image>icons/store_n70_30.dds</image>
+        <price>6500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>NARDI</brand>
+        <category>DennisKtools</category>
+        <shopTranslationOffset>0 0.043 0</shopTranslationOffset>
+        <shopRotationOffset>-0.021 0 0</shopRotationOffset>
+        <shopLoadingDelay initial="0.3"/>
+        <vertexBufferMemoryUsage>1241088</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>221440</indexBufferMemoryUsage>
+        <textureMemoryUsage>1572864</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+    
+	<base>
+        <typeDesc>$l10n_typeDesc_cutterTrailer</typeDesc>
+        <filename>i3d/n70_30.i3d</filename>
+        <size width="3.8" length="12.5" lengthOffset="1.05"/>
+        <components>
+            <component centerOfMass="0 0.4 -0.6" solverIterationCount="20" mass="1600"/>
+            <component solverIterationCount="20" mass="400"/>
+            <joint component1="1" component2="2" node="drawbarJoint" rotLimit="30 56 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL_TRAILED"/>
+    </base>
+    
+	<wheels>
+        <wheelConfigurations>
+			<wheelConfiguration name="Default Special" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT_SPECIAL">
+                <wheels>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisFrontLeft" driveNode="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <wheelChock parkingNode="wheelChock01_01" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d"/>
+                        <wheelChock parkingNode="wheelChock01_02" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisFrontRight" driveNode="wheelFrontRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisBackLeft" driveNode="wheelBackLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisBackRight" driveNode="wheelBackRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                </wheels>
+				<objectChange node="wheelSpareSpecial" 	visibilityActive="true" 	visibilityInactive="false"/>
+				<objectChange node="wheelSpare" 		visibilityActive="false" 	visibilityInactive="true"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG" saveId="TRELLEBORG_DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisFrontLeft" driveNode="wheelFrontLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <wheelChock parkingNode="wheelChock01_01" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d"/>
+                        <wheelChock parkingNode="wheelChock01_02" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisFrontRight" driveNode="wheelFrontRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisBackLeft" driveNode="wheelBackLeft" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" tipOcclusionAreaGroupId="1" restLoad="0.5" repr="axisBackRight" driveNode="wheelBackRight" useReprDirection="true" forcePointRatio="0.25" initialCompression="10" suspTravel="0.055" spring="80" damper="15"/>
+                        <steeringAxle scale="1"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+        <dynamicallyLoadedWheels>
+            <dynamicallyLoadedWheel linkNode="wheelSpare" 			filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml"/>
+            <dynamicallyLoadedWheel linkNode="wheelSpareSpecial" 	filename="wheels/tires/trelleborg/AW305/300_80R15_3.xml"/>
+        </dynamicallyLoadedWheels>
+        <ackermannSteeringConfigurations>
+            <ackermannSteering rotSpeed="20" rotMax="45" rotCenter="0 0"/>
+        </ackermannSteeringConfigurations>
+        <hubs>
+            <color0 useBaseColor="true"/>
+            <color1>SHARED_GREY3</color1>
+            <hub linkNode="wheelFrontLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.165 0.165 0.165"/>
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.165 0.165 0.165"/>
+            <hub linkNode="wheelBackLeft" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true" scale="0.165 0.165 0.165"/>
+            <hub linkNode="wheelBackRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.165 0.165 0.165"/>
+        </hubs>
+    </wheels>
+    
+	<attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" rootNode="n70_30_drawbar_component2" attacherHeight="0.7"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="0.3"/>
+        <steeringAxleAngleScale referenceComponentIndex="2" backwards="true" speedDependent="false" speed="0.1"/>
+    </attachable>
+    
+	<licensePlates>
+        <licensePlate node="licensePlate" position="BACK" preferedType="SQUARISH" placementArea="0.08 0.2 0.2 0.2"/>
+    </licensePlates>
+    
+	<connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric" node="electricSocket" length="1.8" diameter="0.01" straighteningFactor="1" outgoingAdapter="DEFAULT" socket="electric"/>
+    </connectionHoses>
+    
+	<dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="chockSupport_01" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="chockSupport_02" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+    </dynamicallyLoadedParts>
+    
+	<lights>
+        <sharedLight linkNode="redTriangle_02" 	filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml"/>
+        <sharedLight linkNode="redTriangle_02" 	filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml"/>
+        <sharedLight linkNode="yellowRound_02" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_03" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_04" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_05" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_06" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_07" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_08" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_09" 	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_010" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_011" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_012" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_013" filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+        <sharedLight linkNode="yellowRound_014"	filename="$data/shared/assets/reflectors/lizard/yellowRound_02.xml"/>
+		
+        <sharedLight linkNode="sideLight_01"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_02"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_03"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_04"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_05"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_06"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_07"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_08"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_09"	filename="lights/sideMarker07Orange.xml"/>
+        <sharedLight linkNode="sideLight_10"	filename="lights/sideMarker07Orange.xml"/>
+		
+        <sharedLight linkNode="reverseLight"	filename="lights/workingLight15_Reverse.xml"/>
+        
+		<realLights>
+            <high>
+                <light 			node="backLightsHigh1" 			lightTypes="0"/>
+                <light 			node="licensePlateLightHigh" 	lightTypes="0"/>
+                <light 			node="sidemarkerOrange_real" 	lightTypes="0"/>
+                <turnLightLeft 	node="turnLightLeftBack"/>
+                <turnLightRight	node="turnLightRightBack"/>
+                <brakeLight 	node="backLightsHigh1"/>
+                <reverseLight 	node="reverseLight_white_real"/>
+            </high>
+        </realLights>
+		
+        <defaultLights>
+            <defaultLight 	shaderNode="defaultLightStatic" 			lightTypes="0" intensity="50"/>
+            <defaultLight 	shaderNode="defaultLightGlassStatic" 		lightTypes="0" intensity="5"/>
+            <defaultLight 	shaderNode="licensePlateLightStatic" 		lightTypes="0" intensity="50"/>
+            <defaultLight 	shaderNode="licensePlateLightGlassStatic"	lightTypes="0" intensity="5"/>
+        </defaultLights>
+		
+        <turnLights>
+            <turnLightLeft 	shaderNode="turnlightLeftStatic" 			intensity="50"/>
+            <turnLightLeft 	shaderNode="turnlightLeftGlassStatic" 		intensity="5"/>
+            <turnLightRight shaderNode="turnlightRightStatic" 			intensity="50"/>
+            <turnLightRight	shaderNode="turnlightRightGlassStatic" 		intensity="5"/>
+        </turnLights>
+		
+        <brakeLights>
+            <brakeLight 	shaderNode="defaultLightStatic" 			intensity="50"/>
+            <brakeLight 	shaderNode="defaultLightGlassStatic" 		intensity="5"/>
+        </brakeLights>
+		
+        <beaconLights>
+            <beaconLight node="beaconLight03" speed="0.015" filename="$data/shared/assets/beaconLights/lizard/beaconLight03.xml"/>
+        </beaconLights>
+		
+    </lights>
+    
+	<dynamicMountAttacher triggerNode="dynamicMountTrigger" rootNode="n70_30_main_component1" jointNode="cutterJointNode" forceAcceleration="1500" mountType="TYPE_AUTO_ATTACH_XZ" transferMass="true">
+        <lockPosition jointNode="newHollandVarifeed28" xmlFilename="vehicles/newHolland/varifeed28/varifeed28.xml">
+            <objectChange node="mountingPart01" translationActive="0 0 4.242" translationInactive="0 0 -4.300"/>
+            <objectChange node="mountingPart02" translationActive="0 0 -4.033" translationInactive="0 0 4.500"/>
+        </lockPosition>
+        <lockPosition jointNode="newHollandVarifeed28" xmlFilename="vehicles/caseIH/terraFlex3050_28/terraFlex3050_28.xml">
+            <objectChange node="mountingPart01" translationActive="0 0 4.242" translationInactive="0 0 -4.300"/>
+            <objectChange node="mountingPart02" translationActive="0 0 -4.033" translationInactive="0 0 4.500"/>
+        </lockPosition>
+        <lockPosition jointNode="fendtPowerFlow30FT" xmlFilename="vehicles/fendt/powerFlow30FT/powerFlow30FT.xml">
+            <objectChange node="mountingPart01" translationActive="0 0 4.242" translationInactive="0 0 -4.300"/>
+            <objectChange node="mountingPart02" translationActive="0 0 -4.033" translationInactive="0 0 4.500"/>
+        </lockPosition>
+        <lockPosition jointNode="fendtPowerFlow30FT" xmlFilename="vehicles/masseyFerguson/powerFlow30FT/powerFlow30FT.xml">
+            <objectChange node="mountingPart01" translationActive="0 0 4.242" translationInactive="0 0 -4.300"/>
+            <objectChange node="mountingPart02" translationActive="0 0 -4.033" translationInactive="0 0 4.500"/>
+        </lockPosition>
+    </dynamicMountAttacher>
+    
+	<animations>
+        <animation name="moveSupport">
+            <part node="supportArmTrans" startTime="0.25" endTime="0.5" startTrans="0 0.157 0" endTrans="0 0 0"/>
+            <part node="supportArmCrank" startTime="0.25" endTime="0.5" startRot="0 720 0" endRot="0 0 0"/>
+            <part node="supportArmRot" startTime="0.0" endTime="0.25" startRot="0 0 90" endRot="0 0 0"/>
+            <part node="supportCol" startTime="0.0" endTime="0.5" startTrans="0 0.45 0" endTrans="0 0 0"/>
+            <sound template="clackVar2" startTime="0.1" direction="1" volumeScale="3.0" pitchScale="1.2" linkNode="attacherJoint"/>
+            <sound template="clackVar1" startTime="0.24" direction="-1" volumeScale="3.0" pitchScale="1.4" linkNode="attacherJoint"/>
+            <sound template="clackVar3" startTime="0.2" direction="-1" volumeScale="3.0" pitchScale="1.4" linkNode="attacherJoint"/>
+        </animation>
+    </animations>
+    
+	<cylindered>
+        <movingParts>
+            <movingPart node="axis" referencePoint="axisRef" referenceFrame="axisRef" minRot="-56" maxRot="56" limitedAxis="2" isActiveDirty="true" maxUpdateDistance="100"/>
+            <movingPart node="drawbar" referencePoint="axisRef" referenceFrame="axisRef" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="50"/>
+            <movingPart node="axisFrontLeftBar" referencePoint="axisFrontLeftBarRef" referenceFrame="axisFrontLeftBarRef" isActiveDirty="true" maxUpdateDistance="50" scaleZ="true"/>
+            <movingPart node="axisFrontRightBar" referencePoint="axisFrontRightBarRef" referenceFrame="axisFrontRightBarRef" isActiveDirty="true" maxUpdateDistance="50" scaleZ="true"/>
+            <movingPart node="axisBackLeftBar" referencePoint="axisBackLeftBarRef" referenceFrame="axisBackLeftBarRef" isActiveDirty="true" maxUpdateDistance="50" scaleZ="true"/>
+            <movingPart node="axisBackRightBar" referencePoint="axisBackRightBarRef" referenceFrame="axisBackRightBarRef" isActiveDirty="true" maxUpdateDistance="50" scaleZ="true"/>
+            <movingPart node="steeringFrontPart01" localReferencePoint="steeringFrontPart02" referencePoint="steeringFrontPart02Ref" referenceFrame="steeringFrontPart01RefFrame" isActiveDirty="true" maxUpdateDistance="75" limitedAxis="1">
+                <dependentPart node="steeringFrontPart02"/>
+                <dependentPart node="steeringMiddlePart01"/>
+            </movingPart>
+            <movingPart node="steeringFrontPart02" referencePoint="steeringFrontPart02Ref" referenceFrame="steeringFrontPart02Ref"/>
+            <movingPart node="steeringMiddlePart01" localReferencePoint="steeringMiddlePart02" referencePoint="steeringMiddlePart02Ref" referenceFrame="steeringMiddlePart01RefFrame" limitedAxis="1">
+                <dependentPart node="steeringMiddlePart02"/>
+                <dependentPart node="steeringBackPart01"/>
+            </movingPart>
+            <movingPart node="steeringMiddlePart02" referencePoint="steeringMiddlePart02Ref" referenceFrame="steeringMiddlePart02Ref"/>
+            <movingPart node="steeringBackPart01" localReferencePoint="steeringBackPart02" referencePoint="steeringBackPart02Ref" referenceFrame="steeringBackPart01RefFrame" limitedAxis="1">
+                <dependentPart node="steeringBackPart02"/>
+            </movingPart>
+            <movingPart node="steeringBackPart02" referencePoint="steeringBackPart02Ref" referenceFrame="steeringBackPart02Ref"/>
+        </movingParts>
+        <sounds>
+            <hydraulic template="defaultHydraulicSound" linkNode="n70_30_main_component1"/>
+        </sounds>
+    </cylindered>
+    
+	<ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.8" height="2.2" length="10.3" lengthOffset="-3.5" hasCollision="false"/>
+        <agentAttachment jointNode="drawbarJoint" rotCenterWheelIndices="3 4" width="2.4" height="1.2" length="1" lengthOffset="7.2"/>
+    </ai>
+    
+	<foliageBending>
+        <bendingNode minX="-0.8" maxX="0.7" minZ="-4.9" maxZ="4.9" yOffset="0.4"/>
+        <bendingNode minX="-1.25" maxX="1.25" minZ="3.2" maxZ="4.2" yOffset="0.4"/>
+        <bendingNode minX="-1.25" maxX="1.25" minZ="-4" maxZ="-3" yOffset="0.4"/>
+        <bendingNode minX="0" maxX="2.2" minZ="-0.35" maxZ="0.35" yOffset="-0.22" node="attacherJoint"/>
+    </foliageBending>
+    
+	<baseMaterial>
+        <material name="n70_30_mat" baseNode="n70_30_vis">
+            <shaderParameter name="colorMat0" value="SHARED_GREYDARK"/>
+            <shaderParameter name="colorMat1" value="SHARED_GREYDARK"/>
+        </material>
+    </baseMaterial>
+    
+	<baseMaterialConfigurations price="0" useDefaultColors="true" defaultColorIndex="0" title="$l10n_configuration_chassisColor">
+        <material name="n70_30_mat" shaderParameter="colorMat0"/>
+		
+		<baseMaterialConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<baseMaterialConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<baseMaterialConfiguration name="DennisK Black" 		color="0 0 0"/>
+		<baseMaterialConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <baseMaterialConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <baseMaterialConfiguration name="Rostselmash" color="ROSTSELMASH_RED1"/>
+    </baseMaterialConfigurations>
+    
+	<designMaterialConfigurations price="0" useDefaultColors="true" defaultColorIndex="0" title="$l10n_configuration_extensionColor">
+        <material name="n70_30_mat" shaderParameter="colorMat1"/>
+		
+		<designMaterialConfiguration name="DennisK Black" 		color="0 0 0"/>
+		<designMaterialConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<designMaterialConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<designMaterialConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+        <designMaterialConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <designMaterialConfiguration name="Rostselmash" color="ROSTSELMASH_RED1"/>
+    </designMaterialConfigurations>
+    
+	<rimColorConfigurations price="0" useDefaultColors="true" defaultColorIndex="0">
+		<rimColorConfiguration name="Black Matt" 			color="0.015 0.015 0.015" material="23"/>
+		<rimColorConfiguration name="DennisK Dark Blue" 	color="0.005 0.001 0.533"/>
+		<rimColorConfiguration name="DennisK Light Blue" 	color="0.000 0.776 1.000"/>
+		<rimColorConfiguration name="DennisK Black" 		color="0 0 0"/>
+        <rimColorConfiguration name="$l10n_ui_colorSilver" color="SHARED_WHITE1" material="18" price="0"/>
+        <rimColorConfiguration name="New Holland" color="NEWHOLLAND_YELLOW1"/>
+        <rimColorConfiguration name="CLAAS" color="CLAAS_RED1"/>
+    </rimColorConfigurations>
+	
+	<designConfigurations title="$l10n_configuration_spareWheel">
+        <designConfiguration name="$l10n_configuration_valueYes" price="500">
+            <objectChange node="wheelSpareMount" visibilityActive="true"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueNo" price="0">
+            <objectChange node="wheelSpareMount" visibilityActive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+	
+	<design2Configurations title="Lights or reflectors on the side">
+		<design2Configuration name="Lights"  price="500">
+			<objectChange node="sideLights"	visibilityActive="true"	visibilityInactive="false"/>
+		</design2Configuration>
+		<design2Configuration name="reflectors" price="0">
+			<objectChange node="reflectors"	visibilityActive="true"	visibilityInactive="false"/>
+		</design2Configuration>
+	</design2Configurations>
+    
+	<wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    
+	<washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+    
+	<i3dMappings>
+        <i3dMapping id="n70_30_main_component1" 		node="0>"/>
+		
+        <i3dMapping id="n70_30_vis" 					node="0>0"/>
+		
+        <i3dMapping id="electricSocket" 				node="0>0|0|0|0"/>
+        <i3dMapping id="chockSupport_01" 				node="0>0|0|1|0"/>
+        <i3dMapping id="chockSupport_02" 				node="0>0|0|1|1"/>
+        <i3dMapping id="wheelChock01_01" 				node="0>0|0|1|2"/>
+        <i3dMapping id="wheelChock01_02" 				node="0>0|0|1|3"/>
+		
+        <i3dMapping id="axisFrontLeft" 					node="0>0|1|0"/>
+        <i3dMapping id="wheelFrontLeft" 				node="0>0|1|0|0"/>
+        <i3dMapping id="axisFrontLeftBar" 				node="0>0|1|0|1"/>
+        <i3dMapping id="axisFrontRight" 				node="0>0|1|1"/>
+        <i3dMapping id="wheelFrontRight" 				node="0>0|1|1|0"/>
+        <i3dMapping id="axisFrontRightBar" 				node="0>0|1|1|1"/>
+        <i3dMapping id="axisBackLeft" 					node="0>0|1|2"/>
+        <i3dMapping id="wheelBackLeft" 					node="0>0|1|2|0"/>
+        <i3dMapping id="axisBackLeftBar" 				node="0>0|1|2|1"/>
+        <i3dMapping id="axisBackRight" 					node="0>0|1|3"/>
+        <i3dMapping id="wheelBackRight" 				node="0>0|1|3|0"/>
+        <i3dMapping id="axisBackRightBar" 				node="0>0|1|3|1"/>
+		
+        <i3dMapping id="reflectors" 					node="0>0|2|0|0"/>
+        <i3dMapping id="yellowRound_02" 				node="0>0|2|0|0|0"/>
+        <i3dMapping id="yellowRound_03" 				node="0>0|2|0|0|1"/>
+        <i3dMapping id="yellowRound_04" 				node="0>0|2|0|0|2"/>
+        <i3dMapping id="yellowRound_06" 				node="0>0|2|0|0|3"/>
+        <i3dMapping id="yellowRound_07" 				node="0>0|2|0|0|4"/>
+        <i3dMapping id="yellowRound_08" 				node="0>0|2|0|0|5"/>
+        <i3dMapping id="yellowRound_09" 				node="0>0|2|0|0|6"/>
+		
+        <i3dMapping id="sideLights" 					node="0>0|2|0|1"/>
+        <i3dMapping id="sideLight_01" 					node="0>0|2|0|1|0"/>
+        <i3dMapping id="sideLight_02" 					node="0>0|2|0|1|1"/>
+        <i3dMapping id="sideLight_03" 					node="0>0|2|0|1|2"/>
+        <i3dMapping id="sideLight_04" 					node="0>0|2|0|1|3"/>
+        <i3dMapping id="sideLight_05" 					node="0>0|2|0|1|4"/>
+        <i3dMapping id="sideLight_06" 					node="0>0|2|0|1|5"/>
+        <i3dMapping id="sideLight_07" 					node="0>0|2|0|1|6"/>
+        <i3dMapping id="sideLight_08" 					node="0>0|2|0|1|7"/>
+        <i3dMapping id="sideLight_09" 					node="0>0|2|0|1|8"/>
+        <i3dMapping id="sideLight_10" 					node="0>0|2|0|1|9"/>
+        <i3dMapping id="sidemarkerOrange_real" 			node="0>0|2|0|1|10|0"/>
+		
+        <i3dMapping id="axis" 							node="0>0|3|0"/>
+        <i3dMapping id="drawbar" 						node="0>0|3|0|0"/>
+        <i3dMapping id="supportArmRot" 					node="0>0|3|0|0|0|0"/>
+        <i3dMapping id="supportArmTrans" 				node="0>0|3|0|0|0|0|0"/>
+        <i3dMapping id="supportArmCrank" 				node="0>0|3|0|0|0|0|1"/>
+        <i3dMapping id="yellowRound_014" 				node="0>0|3|0|0|2|0"/>
+        <i3dMapping id="yellowRound_010" 				node="0>0|3|0|0|2|1"/>
+        <i3dMapping id="steeringFrontPart02Ref" 		node="0>0|3|0|1"/>
+        <i3dMapping id="yellowRound_05" 				node="0>0|3|0|2|0"/>
+        <i3dMapping id="yellowRound_011" 				node="0>0|3|0|2|1"/>
+        <i3dMapping id="steeringFrontPart01" 			node="0>0|3|1|0"/>
+        <i3dMapping id="steeringFrontPart02" 			node="0>0|3|1|0|0"/>
+        <i3dMapping id="steeringMiddlePart02Ref" 		node="0>0|3|1|0|1"/>
+        <i3dMapping id="axisFrontLeftBarRef" 			node="0>0|3|1|0|2"/>
+        <i3dMapping id="axisFrontRightBarRef" 			node="0>0|3|1|0|3"/>
+        <i3dMapping id="steeringFrontPart01RefFrame" 	node="0>0|3|2"/>
+        <i3dMapping id="steeringMiddlePart01" 			node="0>0|3|3|0"/>
+        <i3dMapping id="steeringMiddlePart02" 			node="0>0|3|3|0|0"/>
+        <i3dMapping id="steeringBackPart02Ref" 			node="0>0|3|3|0|0|0"/>
+        <i3dMapping id="steeringMiddlePart01RefFrame" 	node="0>0|3|4"/>
+        <i3dMapping id="steeringBackPart01" 			node="0>0|3|5|0"/>
+        <i3dMapping id="steeringBackPart02" 			node="0>0|3|5|0|0"/>
+        <i3dMapping id="axisBackLeftBarRef" 			node="0>0|3|5|0|1"/>
+        <i3dMapping id="axisBackRightBarRef" 			node="0>0|3|5|0|2"/>
+        <i3dMapping id="steeringBackPart01RefFrame" 	node="0>0|3|6"/>
+        <i3dMapping id="lightArm" 						node="0>0|3|7"/>
+        <i3dMapping id="turnlightLeftStatic" 			node="0>0|3|7|0|0"/>
+        <i3dMapping id="turnlightLeftGlassStatic" 		node="0>0|3|7|0|1"/>
+        <i3dMapping id="turnlightRightStatic" 			node="0>0|3|7|0|2"/>
+        <i3dMapping id="turnlightRightGlassStatic" 		node="0>0|3|7|0|3"/>
+        <i3dMapping id="defaultLightStatic" 			node="0>0|3|7|0|4"/>
+        <i3dMapping id="defaultLightGlassStatic" 		node="0>0|3|7|0|5"/>
+        <i3dMapping id="licensePlateLightStatic" 		node="0>0|3|7|0|6"/>
+        <i3dMapping id="licensePlateLightGlassStatic" 	node="0>0|3|7|0|7"/>
+        <i3dMapping id="yellowRound_013" 				node="0>0|3|7|1|0"/>
+        <i3dMapping id="yellowRound_012" 				node="0>0|3|7|1|1"/>
+        <i3dMapping id="redTriangle_02" 				node="0>0|3|7|1|2"/>
+        <i3dMapping id="redTriangle_03" 				node="0>0|3|7|1|3"/>
+        <i3dMapping id="beaconLight03" 					node="0>0|3|7|1|4"/>
+        <i3dMapping id="licensePlateLightHigh" 			node="0>0|3|7|2|0"/>
+        <i3dMapping id="backLightsHigh1" 				node="0>0|3|7|3|0"/>
+        <i3dMapping id="turnLightLeftBack" 				node="0>0|3|7|4|0"/>
+        <i3dMapping id="turnLightRightBack" 			node="0>0|3|7|4|1"/>
+        <i3dMapping id="licensePlate" 					node="0>0|3|7|5"/>
+        <i3dMapping id="reverseLight" 					node="0>0|3|7|8"/>
+        <i3dMapping id="reverseLight_white_real" 		node="0>0|3|7|8|1"/>
+        <i3dMapping id="mountingPart01" 				node="0>0|3|8"/>
+        <i3dMapping id="mountingPart02" 				node="0>0|3|9"/>
+		
+        <i3dMapping id="drawbarJoint" 					node="0>0|4"/>
+		
+        <i3dMapping id="cutterJointNode" 				node="0>0|5|0"/>
+        <i3dMapping id="dynamicMountTrigger" 			node="0>0|5|1"/>
+        <i3dMapping id="newHollandVarifeed28" 			node="0>0|5|2"/>
+        <i3dMapping id="fendtPowerFlow30FT" 			node="0>0|5|3"/>
+		
+        <i3dMapping id="wheelSpareMount" 				node="0>0|6|0"/>
+        <i3dMapping id="wheelSpare" 					node="0>0|6|0|0"/>
+        <i3dMapping id="wheelSpare" 					node="0>0|6|0|0"/>
+        <i3dMapping id="wheelSpareSpecial" 				node="0>0|6|0|2"/>
+		
+        <i3dMapping id="n70_30_drawbar_component2" 		node="1>"/>
+        <i3dMapping id="attacherJoint" 					node="1>0"/>
+        <i3dMapping id="axisRef" 						node="1>1"/>
+        <i3dMapping id="supportCol" 					node="1>2"/>
+    </i3dMappings>
+</vehicle>
